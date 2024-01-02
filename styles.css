@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/*search container*/
+#search-container{
+    background-image: url("images/avaenger.jpg");
+    height: 75vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#search-container input{
+    height: 2rem;
+    width: 50%;
+}
+/*search options list*/
+#option-container{
+    top:55% ;
+    height: 15rem;
+    overflow-y: auto;
+    left: 18%;
+    width: 50%;
+}
+#optionlist .card{
+    color: red;
+    background-color: black;
+    text-decoration: none;
+}
+#optionlist .card img{
+    height: 100px;
+}
+.parent-container{ 
+	overflow: hidden;
+	object-fit: contain;
+}
+.list-style-none{
+    list-style-type: none;
+    margin: 0;
+}
+/*featured characters*/
+  #featuredcharscontainer h1{
+    color: #3668db;
+  }
+  #featuredcharscontainer .card{
+    transition: all 0.5s;
+    min-width: 13rem;
+    max-width: 18rem;
+    box-shadow: 0 0 18px #767575;
+  }
+
+  #featuredcharscontainer .card:hover{
+    background-color: #3668db;
+    box-shadow: 0 0 18px #eb2711;
+  }
+/*error message*/
+  #errmessage{
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    z-index: 1;
+  }
+  #alertmsg img{
+    height: 80px;
+    display: flex;  
+    align-items: center;
+    margin: auto;
+  }
+
+/*hide scroll bar for options*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+#option-container::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#option-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/*responsive*/
+@media screen and (max-width:1000px) {
+  /*align center for the featured characters*/
+  .content-center{
+    text-align: -webkit-center;
+  }
+}

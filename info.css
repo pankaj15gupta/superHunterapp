@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url("images/Benatar.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/*character image animation*/
+.charimage{
+    transition: all 0.5s;
+}
+.charimage:hover{
+  transform: scale(1.05);
+}
+/*list style*/
+.square-bullet{
+    list-style-type: square;
+}

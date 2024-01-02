@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Hunter</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/87f063257c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="info.css">
+</head>
+<body class="bg-black">
+    <!--navigation bar: consistes of 3 options: home, information and favourites and profile information
+    note: information option only comes in this view
+    -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-black border-bottom border-bottom-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html">
+                A-Assemble                    
+                </a>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Information</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Information
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Description">Description</a></li>
+                  <li><a class="dropdown-item" href="#Comics">Comics</a></li>
+                  <li><a class="dropdown-item" href="#Series">Series</a></li>
+                  <li><a class="dropdown-item" href="#Stories">Stories</a></li>
+                  <li><a class="dropdown-item" href="#Events">Events</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fav.html">Favourites</a>
+              </li>
+            </ul>
+        </div>
+          </div>
+        </div>
+    </nav>
+    <!--main content-->
+    
+    <div class="container mt-5">
+        <!--heading-->
+        <div class="row charname m-2">
+            <h1 class="text-center fw-bolder fs-1 name p-4 m-2 bg-black text-white"></h1>
+        </div>
+        <!--Description-->
+        <div id="Description" class="row mb-4">
+            <img src="" class="img-fluid charimage col-4 rounded">
+            <div class="desc col-8 bg-primary-subtle p-4">
+                <a id="addfav" href="#" class="float-end" title="Add to Favourites"><i class="fa-regular fa-heart" style="color: rgb(150, 9, 9);"></i></a>
+                <h2 class="text-body-danger desc-head name"></h2>
+                <p id="charid" class="text-body-secondary"></p>
+                <p class="px-4 char-desc">
+                </p>
+                <p class="text-body-secondary last-mod"></p>
+            </div>
+        </div>
+        <!--comics-->
+        <div id="Comics" class="row m-2 mb-4">
+            <div class="row">
+                <h3 class="bg-danger fw-bolder fs-1">Comics</h3>
+                <div class="bg-danger-subtle p-4">
+                    <ul id="comiclist" class="square-bullet">                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--series-->
+        <div id="Series" class="row m-2 mb-4">
+            <div class="row">
+                <h3 class="bg-success fw-bolder fs-1">Series</h3>
+                <div class="bg-success-subtle p-4">
+                    <ul id="serieslist" class="square-bullet">                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--stories-->
+        <div id="Stories" class="row m-2 mb-4">
+            <div class="row">
+                <h3 class="bg-warning fw-bolder fs-1">Stories</h3>
+                <div class="bg-warning-subtle p-4">
+                    <ul id="storieslist" class="square-bullet">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--events-->
+        <div id="Events" class="row m-2 mb-4">
+            <div class="row">
+                <h3 class="bg-info fw-bolder fs-1">Events</h3>
+                <div class="bg-info-subtle p-4">
+                    <ul id="eventslist" class="square-bullet">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="info.js"></script>
+</body>
+</html>
