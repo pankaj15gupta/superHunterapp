@@ -3,4 +3,4 @@ Create a superhero hunter app. Use ONLY vanilla javascript, no libraries or fram
 
 <br>
 
-#I created a superhero search app using only vanilla JavaScript that allows you to search for any of your favorite Marvel characters. You can also create a list of your favorite superheroes
+.I created a superhero search app using only vanilla JavaScript that allows you to search for any of your favorite Marvel characters. You can also create a list of your favorite superheroes
